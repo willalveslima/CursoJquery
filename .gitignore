@@ -1,0 +1,6 @@
+*.ico
+img/
+deploy.sh
+**/.sass-cache/
+*.log
+fonts
