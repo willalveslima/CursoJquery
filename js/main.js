@@ -8,6 +8,7 @@ $(function () {
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
     atualizaPlacar();
+    carregaLibsExternas()
 });
 
 function atualizaTamanhoFrase() {
@@ -88,4 +89,17 @@ function finalizaJogo() {
 function atualizaTempoInicial(tempo) {
     tempoInicial = tempo;
     $("#tempo-digitacao").text(tempo);
+}
+
+
+function carregaLibsExternas(){
+    //selectize
+    $('#usuarios').selectize({
+        create: true,
+        sortField: 'text'
+    });
+    //tooltip
+    $(".tooltip").tooltipster({
+        trigger: "custom"
+    }); 
 }
